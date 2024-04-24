@@ -14,14 +14,13 @@ namespace OOP
     {
         public void view_table(DataGridView dgr)
         {
-         
             OOP_Props DBP = new OOP_Props();
-            string select = "SELECT * FROM tbl_student";
-            using (SqlConnection DBCON = new SqlConnection(DBP.connectionString))
+
+            using (SqlConnection DBCON = new SqlConnection(this.connectionString))
             {
                 try
                 {
-                    SqlDataAdapter adpt = new SqlDataAdapter(select, DBCON);
+                    SqlDataAdapter adpt = new SqlDataAdapter(this.student_all, DBCON);
                     DataTable table = new DataTable();
                     adpt.Fill(table);
                     dgr.DataSource = table;
