@@ -22,20 +22,11 @@ namespace OOP
         private void Form1_Load(object sender, EventArgs e)
 
         {
-            //  OOP_Props dbConnnected = new OOP_Props();
-            //using (SqlConnection conn = new SqlConnection(dbConnnected.connectionSring))
-            //try
-            //    {
-            //        conn.Open();
-            //        MessageBox.Show("Connected to the database.");
-            //    }
-            //catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message);
-            //    }
-
+          
             db_view view = new db_view();
-            view.view_table(dgr);
+            view.view_table(dgr , view.student_all);
+            view.view_table(dgr_class , view.class_all);
+            
         }
 
         private void dgr_CellContentClick(object sender, DataGridViewCellEventArgs e)
