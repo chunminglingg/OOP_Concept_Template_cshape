@@ -15,19 +15,19 @@ namespace OOP.Models
         public string connectionString = $"Server={SERVER_NAME};Database={DB_NAME};User Id={USERNAME};Password={PASSWORD}";
 
         // sql service 
-        public string student_all = "SELETE" +
-                                     "[student_code] as 'Student Code' ," +
-                                     "[first_name] as 'First Name' ," +
-                                     "[last_name] as 'Last Name' ," +
-                                     "[dob] as 'Date of Birth' ," +
-                                     "[groups] as ' Group' ," +
-                                     "[promote] as 'Promote' ," +
-                                     "[field] as 'Field' ," +
-                                     "[year_study] as 'Year Study' ," +
-                                     "[phone] as 'Phone' ," +
-                                     "[email] as 'Email' ," +
-                                     "[address] as 'Address' ," +
-                                     "From tbl_student,";
+        public string student_all = "SELECT " +
+                                 "[student_code] as 'Student Code' ," +
+                                 "[first_name] as 'First Name' ," +
+                                 "[last_name] as 'Last Name' ," +
+                                 "[dob] as 'Date of Birth' ," +
+                                 "[groups] as ' Group' ," +
+                                 "[promote] as 'Promote' ," +
+                                 "[field] as 'Field' ," +
+                                 "[year_study] as 'Year Study' ," +
+                                 "[phone] as 'Phone' ," +
+                                 "[email] as 'Email' ," +
+                                 "[address] as 'Address' " +
+                                 "FROM tbl_student";
 
         // db command
         public string db_command;

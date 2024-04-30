@@ -35,11 +35,11 @@
             // dgr
             // 
             this.dgr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgr.Location = new System.Drawing.Point(0, 0);
+            this.dgr.Location = new System.Drawing.Point(71, 12);
             this.dgr.Name = "dgr";
             this.dgr.RowHeadersWidth = 51;
             this.dgr.RowTemplate.Height = 24;
-            this.dgr.Size = new System.Drawing.Size(788, 438);
+            this.dgr.Size = new System.Drawing.Size(1137, 495);
             this.dgr.TabIndex = 0;
             this.dgr.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgr_CellContentClick);
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 528);
             this.Controls.Add(this.dgr);
             this.Name = "Form1";
             this.Text = "Form1";
