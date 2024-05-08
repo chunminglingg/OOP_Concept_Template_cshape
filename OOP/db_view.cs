@@ -12,15 +12,15 @@ namespace OOP
 {
     internal class db_view: OOP_Props
     {
-        public void view_table(DataGridView dgr)
+        public void view_table(DataGridView dgr , string sqlcommand)
         {
-            OOP_Props DBP = new OOP_Props();
+            //OOP_Props DBP = new OOP_Props();
 
             using (SqlConnection DBCON = new SqlConnection(this.connectionString))
             {
                 try
                 {
-                    SqlDataAdapter adpt = new SqlDataAdapter(this.student_all, DBCON);
+                    SqlDataAdapter adpt = new SqlDataAdapter(sqlcommand, DBCON);
                     DataTable table = new DataTable();
                     adpt.Fill(table);
                     dgr.DataSource = table;

@@ -29,6 +29,12 @@ namespace OOP.Models
                                  "[address] as 'Address' " +
                                  "FROM tbl_student";
 
+        public string class_all = "SELECT " +
+                                  "name as 'Class Name' ," +
+                                  "floor as 'Floor' ," +
+                                  "des as 'Description' " +
+                                  "FROM tbl_class;";
+
         // db command
         public string db_command;
         public string db_execute;
