@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOP.Models;
 using System.Data.SqlClient;
+using OOP.Validation.Employee;
 
 namespace OOP
 {
@@ -72,6 +73,36 @@ namespace OOP
 
         private void txt_des_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click_Click(object sender, EventArgs e)
+        {
+            db_view view = new db_view();
+            if (chk_search_by_code.Checked == true)
+            {
+                view.view_table(dgr, view.student_all, txt_search.Text);
+            }
+            if (chk_search_by_all.Checked == true)
+            {
+                view.view_table(dgr, view.student_all);
+            }
+            if (chk_search_by_id.Checked == true)
+            {
+                view.view_table(dgr , view.student_all , Convert.ToInt16(txt_search.Text));
+            }
+        }
+
+        private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+            Validation.Employee.Employee em = new Validation.Employee.Employee();
+            em.Name = txt_name.Text;
+            txt_name.Text = em.Name;
 
         }
     }
